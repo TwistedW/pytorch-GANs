@@ -20,10 +20,7 @@ python main.py --dataset mnist --gan_type <TYPE> --epoch 40 --batch_size 64
 
 *Name* | *Epoch 1* | *Epoch 20* | *Epoch 40* | *GIF*
 :---: | :---: | :---: | :---: | :---: |
-GAN | <img src = 'assets/mnist_results/GAN_epoch001_test_all_classes.png' height = '200px'> |
-<img src = 'assets/mnist_results/GAN_epoch020_test_all_classes.png' height = '200px'> |
-<img src = 'assets/mnist_results/GAN_epoch040_test_all_classes.png' height = '200px'> |
-<img src = 'assets/mnist_results/GAN_generate_animation.gif' height = '200px'>
+GAN | <img src = 'assets/mnist_results/GAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/GAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/GAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/GAN_generate_animation.gif' height = '200px'>
 
 #### Loss plot
 *Name* | *Loss*
