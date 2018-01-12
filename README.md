@@ -21,6 +21,7 @@ All results are generated from the fixed noise vector.
 :---: | :---: | :---: | :---: | :---: |
 GAN | <img src = 'assets/mnist_results/GAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/GAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/GAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/GAN_generate_animation.gif' height = '200px'>
 CGAN | <img src = 'assets/mnist_results/CGAN_train_00_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_train_19_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_train_39_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_generate_train_animation.gif' height = '200px'>
+VAE | <img src = 'assets/mnist_results/VAE_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/VAE_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/VAE_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/VAE_generate_animation.gif' height = '200px'>
 
 #### GANs for label
 
@@ -33,6 +34,7 @@ CGAN | <img src = 'assets/mnist_results/CGAN_epoch001_test_all_classes.png' heig
 :---: | :---: |
 GAN | <img src = 'assets/mnist_results/GAN_loss.png' height = '230px'>
 CGAN | <img src = 'assets/mnist_results/CGAN_loss.png' height = '230px'>
+VAE | <img src = 'assets/mnist_results/VAE_loss.png' height = '230px'>
 
 ## Folder structure
 The following shows basic folder structure.

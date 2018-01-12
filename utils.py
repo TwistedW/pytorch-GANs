@@ -136,6 +136,30 @@ def loss_plot(hist, path='Train_hist.png', model_name=''):
 
     plt.close()
 
+def loss_VAE_plot(hist, path='Train_hist.png', model_name=''):
+    x = range(len(hist['VAE_loss']))
+
+    y1 = hist['VAE_loss']
+    y2 = hist['KL_loss']
+    y3 = hist['LL_loss']
+
+    plt.plot(x, y1, label='VAE_loss')
+    plt.plot(x, y2, label='KL_loss')
+    plt.plot(x, y3, label='LL_loss')
+
+    plt.xlabel('Iter')
+    plt.ylabel('Loss')
+
+    plt.legend(loc=4)
+    plt.grid(True)
+    plt.tight_layout()
+
+    path = os.path.join(path, model_name + '_loss.png')
+
+    plt.savefig(path)
+
+    plt.close()
+
 def initialize_weights(net):
     for m in net.modules():
         if isinstance(m, nn.Conv2d):
@@ -152,3 +176,31 @@ def check_folder(log_dir):
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
     return log_dir
+
+def gaussian(batch_size, n_dim, mean=0, var=1, n_labels=10, use_label_info=False):
+    if use_label_info:
+        if n_dim != 2:
+            raise Exception("n_dim must be 2.")
+
+        def sample(n_labels):
+            x, y = np.random.normal(mean, var, (2,))
+            angle = np.angle((x-mean) + 1j*(y-mean), deg=True)
+
+            label = ((int)(n_labels*angle))//360
+
+            if label<0:
+                label+=n_labels
+
+            return np.array([x, y]).reshape((2,)), label
+
+        z = np.empty((batch_size, n_dim), dtype=np.float32)
+        z_id = np.empty((batch_size, 1), dtype=np.int32)
+        for batch in range(batch_size):
+            for zi in range((int)(n_dim/2)):
+                    a_sample, a_label = sample(n_labels)
+                    z[batch, zi*2:zi*2+2] = a_sample
+                    z_id[batch] = a_label
+        return z, z_id
+    else:
+        z = np.random.normal(mean, var, (batch_size, n_dim)).astype(np.float32)
+        return z
