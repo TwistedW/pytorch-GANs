@@ -34,7 +34,7 @@ def load_mnist(dataset):
     X = np.concatenate((trX, teX), axis=0)
     y = np.concatenate((trY, teY), axis=0).astype(np.int)
 
-    seed = 547
+    seed = 1094
     np.random.seed(seed)
     np.random.shuffle(X)
     np.random.seed(seed)
@@ -106,6 +106,13 @@ def generate_animation(path, num):
         img_name = path + '_epoch%03d' % (e+1) + '_test_all_classes.png'
         images.append(imageio.imread(img_name))
     imageio.mimsave(path + '_generate_animation.gif', images, fps=5)
+
+def generate_train_animation(path, num):
+    images = []
+    for e in range(num):
+        img_name = path + '_train_%02d' % (e) + '_0300.png'
+        images.append(imageio.imread(img_name))
+    imageio.mimsave(path + '_generate_train_animation.gif', images, fps=5)
 
 def loss_plot(hist, path='Train_hist.png', model_name=''):
     x = range(len(hist['D_loss']))

@@ -7,9 +7,6 @@ https://github.com/hwalsuklee/tensorflow-generative-model-collections
 ## Project progress
 It's adapted to the cifar10, celebA. Details can be reached via email.
 
-#### Fixed generation
-All results are generated from the fixed noise vector.
-
 
 ### Results for mnist
 
@@ -17,15 +14,25 @@ The following results can be reproduced with command:
 ```
 python main.py --dataset mnist --gan_type <TYPE> --epoch 40 --batch_size 64
 ```
+#### Fixed generation
+All results are generated from the fixed noise vector.
 
 *Name* | *Epoch 1* | *Epoch 20* | *Epoch 40* | *GIF*
 :---: | :---: | :---: | :---: | :---: |
 GAN | <img src = 'assets/mnist_results/GAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/GAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/GAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/GAN_generate_animation.gif' height = '200px'>
+CGAN | <img src = 'assets/mnist_results/CGAN_train_00_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_train_19_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_train_39_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_generate_train_animation.gif' height = '200px'>
+
+#### GANs for label
+
+*Name* | *Epoch 1* | *Epoch 20* | *Epoch 40* | *GIF*
+:---: | :---: | :---: | :---: | :---: |
+CGAN | <img src = 'assets/mnist_results/CGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_generate_animation.gif' height = '200px'>
 
 #### Loss plot
 *Name* | *Loss*
 :---: | :---: |
 GAN | <img src = 'assets/mnist_results/GAN_loss.png' height = '230px'>
+CGAN | <img src = 'assets/mnist_results/CGAN_loss.png' height = '230px'>
 
 ## Folder structure
 The following shows basic folder structure.

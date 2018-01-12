@@ -1,5 +1,6 @@
 import argparse, os
 from GAN import GAN
+from CGAN import CGAN
 
 """parsing and configuration"""
 def parse_args():
@@ -66,6 +67,8 @@ def main():
         # declare instance for GAN
     if args.gan_type == 'GAN':
         gan = GAN(args)
+    elif args.gan_type == 'CGAN':
+        gan = CGAN(args)
     else:
         raise Exception("[!] There is no option for " + args.gan_type)
 
