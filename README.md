@@ -29,7 +29,7 @@ CVAE | <img src = 'assets/mnist_results/CVAE_train_00_0300.png' height = '200px'
 *Name* | *Epoch 1* | *Epoch 20* | *Epoch 40* | *GIF*
 :---: | :---: | :---: | :---: | :---: |
 CGAN | <img src = 'assets/mnist_results/CGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_generate_animation.gif' height = '200px'>
-CGAN | <img src = 'assets/mnist_results/CVAE_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_generate_animation.gif' height = '200px'>
+CVAE | <img src = 'assets/mnist_results/CVAE_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_generate_animation.gif' height = '200px'>
 
 #### Loss plot
 *Name* | *Loss*
