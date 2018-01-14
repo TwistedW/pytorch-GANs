@@ -77,7 +77,7 @@ class encoder(nn.Module):
 class VAE_T(torch.nn.Module):
     def __init__(self, encoder, decoder):
         super(VAE_T, self).__init__()
-        self.z_dim = 64
+        self.z_dim = 62
         self.encoder = encoder
         self.decoder = decoder
 
@@ -85,8 +85,8 @@ class VAE_T(torch.nn.Module):
         """
         Return the latent normal sample z ~ N(mu, sigma^2)
         """
-        mu = h_enc[:, :62]
-        log_sigma = h_enc[:, 62:]
+        mu = h_enc[:, :self.z_dim]
+        log_sigma = h_enc[:, self.z_dim:]
         sigma = torch.exp(log_sigma)
         std_z = torch.from_numpy(np.random.normal(0, 1, size=sigma.size())).type(torch.FloatTensor).cuda()
 
