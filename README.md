@@ -23,6 +23,9 @@ GAN | <img src = 'assets/mnist_results/GAN_epoch001_test_all_classes.png' height
 CGAN | <img src = 'assets/mnist_results/CGAN_train_00_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_train_19_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_train_39_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_generate_train_animation.gif' height = '200px'>
 VAE | <img src = 'assets/mnist_results/VAE_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/VAE_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/VAE_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/VAE_generate_animation.gif' height = '200px'>
 CVAE | <img src = 'assets/mnist_results/CVAE_train_00_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_train_19_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_train_39_0300.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_generate_train_animation.gif' height = '200px'>
+WGAN | <img src = 'assets/mnist_results/WGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/WGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/WGAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/WGAN_generate_animation.gif' height = '200px'>
+LSGAN | <img src = 'assets/mnist_results/LSGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/LSGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/LSGAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/LSGAN_generate_animation.gif' height = '200px'>
+EBGAN | <img src = 'assets/mnist_results/EBGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/EBGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/EBGAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/EBGAN_generate_animation.gif' height = '200px'>
 
 #### GANs for label
 
@@ -38,6 +41,9 @@ GAN | <img src = 'assets/mnist_results/GAN_loss.png' height = '230px'>
 CGAN | <img src = 'assets/mnist_results/CGAN_loss.png' height = '230px'>
 VAE | <img src = 'assets/mnist_results/VAE_loss.png' height = '230px'>
 CVAE | <img src = 'assets/mnist_results/CVAE_loss.png' height = '230px'>
+WGAN | <img src = 'assets/mnist_results/WGAN_loss.png' height = '230px'>
+LSGAN | <img src = 'assets/mnist_results/LSGAN_loss.png' height = '230px'>
+EBGAN | <img src = 'assets/mnist_results/EBGAN_loss.png' height = '230px'>
 
 ## Folder structure
 The following shows basic folder structure.
