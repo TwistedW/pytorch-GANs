@@ -1,6 +1,14 @@
 import argparse, os
 from GAN import GAN
 from CGAN import CGAN
+from WGAN import WGAN
+from VAE import VAE
+from LSGAN import LSGAN
+from CVAE import CVAE
+from WGAN_GP import WGAN_GP
+from EBGAN import EBGAN
+from infoGAN import infoGAN
+from ACGAN import ACGAN
 
 """parsing and configuration"""
 def parse_args():
@@ -8,7 +16,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description=desc)
 
     parser.add_argument('--gan_type', type=str, default='EBGAN',
-                        choices=['GAN', 'CGAN', 'infoGAN', 'ACGAN', 'EBGAN', 'BEGAN', 'WGAN', 'WGAN_GP', 'DRAGAN', 'LSGAN'],
+                        choices=['GAN', 'CGAN','VAE', 'infoGAN', 'ACGAN', 'EBGAN', 'BEGAN', 'WGAN', 'WGAN_GP', 'DRAGAN', 'LSGAN', 'CVAE'],
                         help='The type of GAN')#, required=True)
     parser.add_argument('--dataset', type=str, default='mnist', choices=['mnist', 'fashion-mnist', 'celebA'],
                         help='The name of dataset')
@@ -69,6 +77,24 @@ def main():
         gan = GAN(args)
     elif args.gan_type == 'CGAN':
         gan = CGAN(args)
+    elif args.gan_type == 'WGAN':
+        gan = WGAN(args)
+    elif args.gan_type == 'VAE':
+        gan = VAE(args)
+    elif args.gan_type == 'LSGAN':
+        gan = LSGAN(args)
+    elif args.gan_type == 'CVAE':
+        gan = CVAE(args)
+    elif args.gan_type == 'WGAN_GP':
+        gan = WGAN_GP(args)
+    elif args.gan_type == 'LSGAN':
+        gan = LSGAN(args)
+    elif args.gan_type == 'EBGAN':
+        gan = EBGAN(args)
+    elif args.gan_type == 'infoGAN':
+        gan = infoGAN(args)
+    elif args.gan_type == 'ACGAN':
+        gan = ACGAN(args)
     else:
         raise Exception("[!] There is no option for " + args.gan_type)
 
