@@ -77,6 +77,8 @@ The following shows basic folder structure.
 * torchvision 0.1.9
 
 ## Acknowledgements
+- -
+ -
 This implementation has been based on
 [tensorflow-generative-model-collections](https://github.com/hwalsuklee/tensorflow-generative-model-collections)
 and tested with Pytorch on Ubuntu 16.04 using GPU.
