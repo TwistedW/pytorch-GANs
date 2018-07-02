@@ -28,6 +28,7 @@ LSGAN | <img src = 'assets/mnist_results/LSGAN_epoch001_test_all_classes.png' he
 EBGAN | <img src = 'assets/mnist_results/EBGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/EBGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/EBGAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/EBGAN_generate_animation.gif' height = '200px'>
 ACGAN | <img src = 'assets/mnist_results/ACGAN_train_00_0300.png' height = '200px'> | <img src = 'assets/mnist_results/ACGAN_train_19_0300.png' height = '200px'> | <img src = 'assets/mnist_results/ACGAN_train_39_0300.png' height = '200px'> | <img src = 'assets/mnist_results/ACGAN_generate_train_animation.gif' height = '200px'>
 infoGAN | <img src = 'assets/mnist_results/infoGAN_train_00_0300.png' height = '200px'> | <img src = 'assets/mnist_results/infoGAN_train_19_0300.png' height = '200px'> | <img src = 'assets/mnist_results/infoGAN_train_39_0300.png' height = '200px'> | <img src = 'assets/mnist_results/infoGAN_generate_train_animation.gif' height = '200px'>
+SAGAN | <img src = 'assets/mnist_results/SAGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/SAGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/SAGAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/SAGAN_generate_animation.gif' height = '200px'>
 
 #### GANs for label
 
@@ -36,7 +37,7 @@ infoGAN | <img src = 'assets/mnist_results/infoGAN_train_00_0300.png' height = '
 CGAN | <img src = 'assets/mnist_results/CGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CGAN_generate_animation.gif' height = '200px'>
 CVAE | <img src = 'assets/mnist_results/CVAE_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/CVAE_generate_animation.gif' height = '200px'>
 ACGAN | <img src = 'assets/mnist_results/ACGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/ACGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/ACGAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/ACGAN_generate_animation.gif' height = '200px'>
-infoGAN | <img src = 'assets/mnist_results/infoGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/infoGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/infoGAN_epoch040_test_all_classes.png' height = '200px'> |
+infoGAN | <img src = 'assets/mnist_results/infoGAN_epoch001_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/infoGAN_epoch020_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/infoGAN_epoch040_test_all_classes.png' height = '200px'> | <img src = 'assets/mnist_results/infoGAN_generate_animation.gif' height = '200px'>
 
 #### Loss plot
 *Name* | *Loss*
@@ -50,6 +51,7 @@ LSGAN | <img src = 'assets/mnist_results/LSGAN_loss.png' height = '230px'>
 EBGAN | <img src = 'assets/mnist_results/EBGAN_loss.png' height = '230px'>
 ACGAN | <img src = 'assets/mnist_results/ACGAN_loss.png' height = '230px'>
 infoGAN | <img src = 'assets/mnist_results/infoGAN_loss.png' height = '230px'>
+SAGAN | <img src = 'assets/mnist_results/SAGAN_loss.png' height = '230px'>
 
 ## Folder structure
 The following shows basic folder structure.
@@ -62,7 +64,7 @@ The following shows basic folder structure.
 │       ├── train-images-idx3-ubyte.gz
 │       └── train-labels-idx1-ubyte.gz
 │
-├── GAN.py # vainilla GAN...
+├── GAN.py # vainilla GAN
 ├── utils.py # utils
 ├── models # model files to be saved here
 └── results # generation results to be saved here
@@ -71,14 +73,12 @@ The following shows basic folder structure.
 ## Development Environment
 * Ubuntu 16.04 LTS
 * NVIDIA GTX 1080
-* cuda 8.0
+* cuda 9.0
 * Python 3.5.2
-* pytorch 0.2.0.post3
-* torchvision 0.1.9
+* pytorch 0.4.0
+* torchvision 0.2.1
 
 ## Acknowledgements
-- -
- -
 This implementation has been based on
 [tensorflow-generative-model-collections](https://github.com/hwalsuklee/tensorflow-generative-model-collections)
 and tested with Pytorch on Ubuntu 16.04 using GPU.

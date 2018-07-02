@@ -9,6 +9,7 @@ from WGAN_GP import WGAN_GP
 from EBGAN import EBGAN
 from infoGAN import infoGAN
 from ACGAN import ACGAN
+from SAGAN import SAGAN
 
 """parsing and configuration"""
 def parse_args():
@@ -16,7 +17,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description=desc)
 
     parser.add_argument('--gan_type', type=str, default='EBGAN',
-                        choices=['GAN', 'CGAN','VAE', 'infoGAN', 'ACGAN', 'EBGAN', 'BEGAN', 'WGAN', 'WGAN_GP', 'DRAGAN', 'LSGAN', 'CVAE'],
+                        choices=['GAN', 'CGAN','VAE', 'infoGAN', 'ACGAN', 'EBGAN', 'BEGAN', 'WGAN', 'WGAN_GP',
+                                 'DRAGAN', 'LSGAN', 'CVAE', 'SAGAN'],
                         help='The type of GAN')#, required=True)
     parser.add_argument('--dataset', type=str, default='mnist', choices=['mnist', 'fashion-mnist', 'celebA'],
                         help='The name of dataset')
@@ -95,6 +97,8 @@ def main():
         gan = infoGAN(args)
     elif args.gan_type == 'ACGAN':
         gan = ACGAN(args)
+    elif args.gan_type == 'SAGAN':
+        gan = SAGAN(args)
     else:
         raise Exception("[!] There is no option for " + args.gan_type)
 
