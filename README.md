@@ -5,7 +5,7 @@ My items: [[Tensorflow version]](https://github.com/TwistedW/GANs)
 https://github.com/hwalsuklee/tensorflow-generative-model-collections
 
 ## Project progress
-It's adapted to the cifar10, celebA. Details can be reached via email.
+It's adapted to the cifar10. Details can be reached via email.
 
 
 ### Results for mnist
